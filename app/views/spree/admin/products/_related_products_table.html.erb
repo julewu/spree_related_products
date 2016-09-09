@@ -17,7 +17,7 @@
   </thead>
   <tbody>
     <% product.relations.each do |relation| %>
-      <%= render 'related_products_table_tbody', relation: relation %>
+      <%= render 'related_products_relation_tr', relation: relation %>
     <% end %>
   </tbody>
 </table>

@@ -1,4 +1,4 @@
-$('#products-table-wrapper tbody').append('<%= escape_javascript(render "spree/admin/products/related_products_table_tbody", relation: @relation) %>');
+$('#products-table-wrapper tbody').append('<%= escape_javascript(render "spree/admin/products/related_products_relation_tr", relation: @relation) %>');
 $('#add_product_name').val('');
 $('#add_variant_id').val('');
 $('#add_quantity').val(1);

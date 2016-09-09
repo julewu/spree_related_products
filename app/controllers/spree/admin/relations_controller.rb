@@ -8,7 +8,8 @@ module Spree
       def create
         @relation = Relation.new(relation_params)
         @relation.relatable = @product
-        @relation.related_to = Spree::Variant.find(relation_params[:related_to_id]).product
+        @relation.related_to = Spree::Product.find(relation_params[:related_to_id])
+        @relation.position = @product.relations.pluck(:position).max.to_i + 1
         @relation.save
 
         respond_with(@relation)
